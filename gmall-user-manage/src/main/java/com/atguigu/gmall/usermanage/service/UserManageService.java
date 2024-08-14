@@ -1,5 +1,6 @@
 package com.atguigu.gmall.usermanage.service;
 
+import com.atguigu.gmall.usermanage.bean.UserAddress;
 import com.atguigu.gmall.usermanage.bean.UserInfo;
 
 import java.util.List;
@@ -14,4 +15,6 @@ public interface UserManageService {
     public void addUserInfo(UserInfo userInfo);
 
     public void updateUserInfo(UserInfo userInfo);
+
+    public List<UserAddress> getUserAddressList(String userId);
 }

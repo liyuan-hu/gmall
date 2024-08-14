@@ -1,6 +1,8 @@
 package com.atguigu.gmall.usermanage.service.impl;
 
+import com.atguigu.gmall.usermanage.bean.UserAddress;
 import com.atguigu.gmall.usermanage.bean.UserInfo;
+import com.atguigu.gmall.usermanage.mapper.UserAddressMapper;
 import com.atguigu.gmall.usermanage.mapper.UserInfoMapper;
 import com.atguigu.gmall.usermanage.service.UserManageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,8 @@ public class UserManageServiceImpl implements UserManageService {
 
     @Autowired
     UserInfoMapper userInfoMapper;
+    @Autowired
+    UserAddressMapper userAddressMapper;
 
     @Override
     public List<UserInfo> getUserInfoList(UserInfo userInfoQuery) {
@@ -47,5 +51,14 @@ public class UserManageServiceImpl implements UserManageService {
         example.createCriteria().andLike("loginName", "%" + userInfo.getLoginName() + "%");
         userInfo.setLoginName(null);
         userInfoMapper.updateByExampleSelective(userInfo, example);
+    }
+
+    @Override
+    public List<UserAddress> getUserAddressList(String userId) {
+        List<UserAddress> addressList = null;
+        UserAddress userAddress = new UserAddress();
+        userAddress.setUserId(userId);
+        addressList = userAddressMapper.select(userAddress);
+        return addressList;
     }
 }
