@@ -1,13 +1,13 @@
 package com.atguigu.gmall.usermanage.service.impl;
 
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.atguigu.gmall.bean.UserAddress;
 import com.atguigu.gmall.bean.UserInfo;
 import com.atguigu.gmall.mapper.UserAddressMapper;
 import com.atguigu.gmall.mapper.UserInfoMapper;
 import com.atguigu.gmall.service.UserManageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
