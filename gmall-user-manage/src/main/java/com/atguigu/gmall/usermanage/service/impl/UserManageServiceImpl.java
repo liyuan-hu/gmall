@@ -1,10 +1,11 @@
 package com.atguigu.gmall.usermanage.service.impl;
 
-import com.atguigu.gmall.usermanage.bean.UserAddress;
-import com.atguigu.gmall.usermanage.bean.UserInfo;
-import com.atguigu.gmall.usermanage.mapper.UserAddressMapper;
-import com.atguigu.gmall.usermanage.mapper.UserInfoMapper;
-import com.atguigu.gmall.usermanage.service.UserManageService;
+
+import com.atguigu.gmall.bean.UserAddress;
+import com.atguigu.gmall.bean.UserInfo;
+import com.atguigu.gmall.mapper.UserAddressMapper;
+import com.atguigu.gmall.mapper.UserInfoMapper;
+import com.atguigu.gmall.service.UserManageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
