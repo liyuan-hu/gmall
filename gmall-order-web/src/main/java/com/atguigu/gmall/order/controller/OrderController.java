@@ -1,4 +1,4 @@
-package com.atguigu.gmall.order.Controller;
+package com.atguigu.gmall.order.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSON;

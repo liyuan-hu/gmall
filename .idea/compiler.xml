@@ -10,6 +10,7 @@
         <module name="gmall-interface" />
         <module name="gmall-bean" />
         <module name="gmall-manage-web" />
+        <module name="gmall-manage-service" />
         <module name="gmall-service-util" />
         <module name="gmall-order-web" />
         <module name="gmall-web-util" />

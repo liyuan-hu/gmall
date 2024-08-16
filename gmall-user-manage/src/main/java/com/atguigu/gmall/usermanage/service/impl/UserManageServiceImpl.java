@@ -4,9 +4,9 @@ package com.atguigu.gmall.usermanage.service.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.atguigu.gmall.bean.UserAddress;
 import com.atguigu.gmall.bean.UserInfo;
-import com.atguigu.gmall.mapper.UserAddressMapper;
-import com.atguigu.gmall.mapper.UserInfoMapper;
 import com.atguigu.gmall.service.UserManageService;
+import com.atguigu.gmall.usermanage.mapper.UserAddressMapper;
+import com.atguigu.gmall.usermanage.mapper.UserInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 
@@ -15,8 +15,10 @@ import java.util.List;
 @Service
 public class UserManageServiceImpl implements UserManageService {
 
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     UserInfoMapper userInfoMapper;
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     UserAddressMapper userAddressMapper;
 
