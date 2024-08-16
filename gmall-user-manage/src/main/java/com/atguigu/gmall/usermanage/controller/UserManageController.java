@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 public class UserManageController {
 
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     UserManageService userManageService;
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出框</title>
+    <script type="text/javascript" src="/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/easyui/easyloader.js"></script>
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css"></link>
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/default/easyui.css"></link>
+</head>
+<body>
+<div id="dig" class="easyui-dialog" title="编辑属性" style="width: 600px;height: 500px;"
+     data-options="iconCls:'icon-save',resizable:true,modal:true" buttons="#bb">
+    <form id="attrForm">
+        <br/>
+        <label>属性名称:</label>
+        <input id="attrName" name="attrName" class="easyui-textbox" data-options="" style="width:100px"/>
+        <input id="attrId" name="attrId" type="hidden"/>
+        <br/><br/>
+        <table id="dg_av" class="easyui-datagrid" title="属性值列表"></table>
+    </form>
+</div>
+<div id="bb">
+    <a href="#" class="easyui-linkbutton" onclick="saveAttr()">保存</a>
+    <a href="#" class="easyui-linkbutton">关闭</a>
+</div>
+</body>
+</html>

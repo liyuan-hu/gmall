@@ -21,9 +21,10 @@
             });
         }
     }
-    function reloadAttrList(){
-        var ctg3val=$("#ctg3ForAttrList").combobox('getValue');
-        $('#dg').datagrid({url:'getAttrList?catalog3Id='+ctg3val});
+
+    function reloadAttrList() {
+        var ctg3val = $("#ctg3ForAttrList").combobox('getValue');
+        $('#dg').datagrid({url: 'getAttrList?catalog3Id=' + ctg3val});
     }
 </script>
 <body class="easyui-layout">
@@ -64,8 +65,8 @@
 </div>
 <div id="tb" style="padding: 5px;height: auto">
     <div style="margin-bottom: 5px">
-        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
-        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true">编辑</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="addAttrInfo()">添加</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editAttrInfo()">编辑</a>
         <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true">删除</a>
     </div>
     <div>
@@ -83,8 +84,10 @@
             $('#ctg3ForAttrList').combobox('reload','getCatalog3?catalog2Id='+rec.id);
         }"></select>
         三级分类：
-        <select name="ctg3ForAttrList" id="ctg3ForAttrList" class="easyui-combobox" style="width: 100px" data-options="valueField:'id',textField:'name'">
-            <a href="#" class="easyui-linkbutton" iconCls="icon-search" onclick="javascipt:reloadAttrList()">刷新属性列表</a>
+        <select name="ctg3ForAttrList" id="ctg3ForAttrList" class="easyui-combobox" style="width: 100px"
+                data-options="valueField:'id',textField:'name'">
+            <a href="#" class="easyui-linkbutton" iconCls="icon-search"
+               onclick="javascipt:reloadAttrList()">刷新属性列表</a>
         </select>
     </div>
 </div>
